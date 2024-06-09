@@ -7,7 +7,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class WorkshopMongodbApplication {
 
 	public static void main(String[] args) {
+
 		SpringApplication.run(WorkshopMongodbApplication.class, args);
+
 	}
 
 }
