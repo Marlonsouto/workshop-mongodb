@@ -1,6 +1,7 @@
 package com.workshopdb.Workshop_mongodb.service;
 
 import com.workshopdb.Workshop_mongodb.domain.User;
+import com.workshopdb.Workshop_mongodb.dto.UserDto;
 import com.workshopdb.Workshop_mongodb.repository.UserRepoository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
