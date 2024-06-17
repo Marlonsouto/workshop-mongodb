@@ -3,7 +3,6 @@ package com.workshopdb.Workshop_mongodb.domain;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-import org.springframework.data.mongodb.core.mapping.MongoId;
 
 import java.io.Serializable;
 @Document
@@ -55,6 +54,8 @@ public class User implements Serializable {
         result = 31 * result + getEmail().hashCode();
         return result;
     }
+
+
 }
 
 
