@@ -1,4 +1,4 @@
-package com.workshopdb.Workshop_mongodb.resourse.exception;
+package com.workshopdb.workshopmongodb.resourse.exception;
 
 import lombok.*;
 
@@ -16,7 +16,6 @@ public class StandardError implements Serializable {
     private String error;
     private String message;
     private URI path;
-
 
     public StandardError(StandardError nao_encntrado) {
     }

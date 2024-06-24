@@ -1,6 +1,6 @@
-package com.workshopdb.Workshop_mongodb.repository;
+package com.workshopdb.workshopmongodb.repository;
 
-import com.workshopdb.Workshop_mongodb.domain.User;
+import com.workshopdb.workshopmongodb.domain.User;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 

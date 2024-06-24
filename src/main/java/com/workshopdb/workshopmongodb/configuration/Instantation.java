@@ -1,7 +1,7 @@
-package com.workshopdb.Workshop_mongodb.configuration;
+package com.workshopdb.workshopmongodb.configuration;
 
-import com.workshopdb.Workshop_mongodb.domain.User;
-import com.workshopdb.Workshop_mongodb.repository.UserRepository;
+import com.workshopdb.workshopmongodb.domain.User;
+import com.workshopdb.workshopmongodb.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import java.util.Arrays;

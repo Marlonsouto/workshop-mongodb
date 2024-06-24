@@ -1,4 +1,4 @@
-package com.workshopdb.Workshop_mongodb.service.exception;
+package com.workshopdb.workshopmongodb.service.exception;
 
 public class ObjectNotFoundException extends RuntimeException {
 

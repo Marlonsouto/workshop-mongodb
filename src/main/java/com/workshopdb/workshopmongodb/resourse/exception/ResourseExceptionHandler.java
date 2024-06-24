@@ -1,7 +1,7 @@
-package com.workshopdb.Workshop_mongodb.resourse.exception;
+package com.workshopdb.workshopmongodb.resourse.exception;
 
 
-import com.workshopdb.Workshop_mongodb.service.exception.ObjectNotFoundException;
+import com.workshopdb.workshopmongodb.service.exception.ObjectNotFoundException;
 import org.springframework.http.HttpRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

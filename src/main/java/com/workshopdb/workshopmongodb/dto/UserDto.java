@@ -1,12 +1,10 @@
-package com.workshopdb.Workshop_mongodb.dto;
+package com.workshopdb.workshopmongodb.dto;
 
-import com.workshopdb.Workshop_mongodb.domain.User;
+import com.workshopdb.workshopmongodb.domain.User;
 import lombok.EqualsAndHashCode;
-
-import java.io.Serial;
-
+import lombok.Getter;
 @EqualsAndHashCode
-
+@Getter
 public class UserDto {
 
     String id;
@@ -17,22 +15,14 @@ public class UserDto {
     }
 
     public UserDto(User user) {
+        this.id = user.getId();
         this.name = user.getName();
         this.email = user.getEmail();
-    }
-
-    public String getName() {
-        return name;
     }
 
     public void setName(String name) {
         this.name = name;
     }
-
-    public String getEmail() {
-        return email;
-    }
-
     public void setEmail(String email) {
         this.email = email;
     }
