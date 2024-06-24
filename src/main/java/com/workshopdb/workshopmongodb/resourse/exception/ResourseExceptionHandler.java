@@ -18,7 +18,7 @@ public class ResourseExceptionHandler {
                 new StandardError(StandardError.builder()
                         .status(httpStatus.value())
                         .path(httpRequest.getURI())
-                        .error("nao encntrado")
+                        .error(exception.getLocalizedMessage())
                         .timastamp(System.currentTimeMillis())
                         .message(exception.getMessage()).build());
 

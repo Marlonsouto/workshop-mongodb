@@ -17,6 +17,6 @@ public class StandardError implements Serializable {
     private String message;
     private URI path;
 
-    public StandardError(StandardError nao_encntrado) {
+    public StandardError(StandardError naoEncntrado) {
     }
 }
