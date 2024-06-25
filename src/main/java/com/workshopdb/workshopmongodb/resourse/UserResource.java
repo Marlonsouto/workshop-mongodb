@@ -1,5 +1,6 @@
 package com.workshopdb.workshopmongodb.resourse;
 
+import com.workshopdb.workshopmongodb.domain.Post;
 import com.workshopdb.workshopmongodb.dto.UserDto;
 import com.workshopdb.workshopmongodb.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,6 +31,13 @@ public class UserResource {
         final var user = userService.findUserByiId(id);
         return ResponseEntity.ok().body(new UserDto(user));
     }
+
+    @GetMapping("/{id}/posts")
+    public ResponseEntity<List<Post>> findPosts (@PathVariable String id){
+        List<Post> userPosts = userService.findUserByiId(id).getPosts();
+        return ResponseEntity.ok().body(userPosts);
+    }
+
 
     @PostMapping()
     public ResponseEntity<Void> save(@Validated @RequestBody UserDto userDto){
