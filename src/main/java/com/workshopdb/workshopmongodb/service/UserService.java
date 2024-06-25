@@ -25,7 +25,7 @@ public class UserService {
         return userRepository.findById(id).orElseThrow(() -> new ObjectNotFoundException("Nao encontrado"));
     }
 
-    public User saveUser(User user) {// Dar manutencao
+    public User saveUser(User user) {
         if (userRepository.existsById(user.getId())) {
             throw new RuntimeException("usuario ja existe");
         }
@@ -42,21 +42,12 @@ public class UserService {
         userRepository.deleteById(id);
     }
 
-<<<<<<< HEAD
     public void update(User objUser, String id) {
-=======
-    public User update(User objUser, String id) {
->>>>>>> 4ec9368e724521e85d2c2e31e547b1293fe2a810
-        Optional<User> userOptional = Optional.ofNullable(userRepository.findById(id)
-                .orElseThrow(() -> new ObjectNotFoundException("Id nao encontrado")));
+        Optional<User> userOptional = Optional.ofNullable(userRepository.findById(id).orElseThrow(() -> new ObjectNotFoundException("Id nao encontrado")));
         User user = userOptional.get();
-        updateData(objUser, user);
-<<<<<<< HEAD
-        userRepository.save(user);
-=======
-        return userRepository.save(user);
 
->>>>>>> 4ec9368e724521e85d2c2e31e547b1293fe2a810
+        updateData(objUser, user);
+        userRepository.save(user);
     }
 
     public User fromDto(UserDto userDto) {

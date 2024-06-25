@@ -12,6 +12,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
+import java.util.List;
 import java.util.TimeZone;
 @Configuration
 public class Instantation implements CommandLineRunner {
@@ -41,7 +42,12 @@ public class Instantation implements CommandLineRunner {
 
         postRepository.saveAll(Arrays.asList(post,post1));
 
+        user1.getPosts().addAll(List.of(post,post1));;
+
+        userRepository.save(user1);
+
     }
+
 
 
 }

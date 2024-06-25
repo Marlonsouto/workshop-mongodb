@@ -4,8 +4,11 @@ package com.workshopdb.workshopmongodb.domain;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 import java.io.Serializable;
+import java.util.LinkedList;
+import java.util.List;
 
 @Getter @EqualsAndHashCode
 @Document
@@ -16,8 +19,10 @@ public class User implements Serializable {
     private String name;
     private String email;
 
-    public User(){
-    }
+    @DBRef(lazy = true)
+    private final List<Post> posts = new LinkedList<>();
+
+    public User(){}
 
     public User(String id, String name, String email) {
         this.id = id;
