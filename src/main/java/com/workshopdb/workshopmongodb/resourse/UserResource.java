@@ -38,7 +38,6 @@ public class UserResource {
         return ResponseEntity.ok().body(userPosts);
     }
 
-
     @PostMapping()
     public ResponseEntity<Void> save(@Validated @RequestBody UserDto userDto){
         var user = userService.fromDto(userDto);

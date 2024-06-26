@@ -1,6 +1,6 @@
 package com.workshopdb.workshopmongodb.domain;
 
-import com.workshopdb.workshopmongodb.dto.authorDto;
+import com.workshopdb.workshopmongodb.dto.AuthorDto;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
@@ -20,11 +20,11 @@ public class Post implements Serializable {
     private Date date;
     private String title;
     private String body ;
-    private transient authorDto author ;
+    private transient AuthorDto author ;
 
     public Post() {}
 
-    public Post(String id, Date date, String title, String body, authorDto author) {
+    public Post(String id, Date date, String title, String body, AuthorDto author) {
         this.id = id;
         this.date = date;
         this.title = title;

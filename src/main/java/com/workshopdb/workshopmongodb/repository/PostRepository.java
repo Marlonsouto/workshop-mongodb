@@ -1,7 +1,6 @@
 package com.workshopdb.workshopmongodb.repository;
 
 import com.workshopdb.workshopmongodb.domain.Post;
-import com.workshopdb.workshopmongodb.domain.User;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
