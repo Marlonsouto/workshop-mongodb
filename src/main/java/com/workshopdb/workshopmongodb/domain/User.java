@@ -11,7 +11,8 @@ import java.io.Serializable;
 import java.util.LinkedList;
 import java.util.List;
 
-@Getter @EqualsAndHashCode @Setter
+
+@EqualsAndHashCode @Setter @Getter
 
 @Document
 
@@ -19,7 +20,9 @@ public class User implements Serializable {
 
     @Id
     private String id;
+    @Setter
     private String name;
+    @Setter
     private String email;
 
     @DBRef(lazy = true)
@@ -37,14 +40,6 @@ public class User implements Serializable {
         this.name = name;
         this.email = email;
         this.posts = posts;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
     }
 
 }

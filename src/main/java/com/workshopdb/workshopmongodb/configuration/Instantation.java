@@ -20,6 +20,7 @@ public class Instantation implements CommandLineRunner {
     private UserRepository userRepository;
     @Autowired
     private PostRepository postRepository;
+
     @Override
     public void run(String... args) throws Exception {
 
@@ -29,21 +30,21 @@ public class Instantation implements CommandLineRunner {
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
         sdf.setTimeZone(TimeZone.getTimeZone("GMT"));
 
-        User user1 = new User(null, "maria blue", "mariaBlue@gmail.com" );
+        User user = new User(null, "maria blue", "mariaBlue@gmail.com" );
         User user2 = new User(null, "jorge Red", "JorgeRed@gmail.com");
         User user3 = new User(null, "Bob green","Bob22@gmail.com");
 
-        userRepository.saveAll(Arrays.asList(user1,user2,user3));
+        userRepository.saveAll(Arrays.asList(user,user2,user3));
 
         Post post = new Post(null, sdf.parse("28/01/1995"),"hoje é dia de praia","nada melhor que um descanco",
-                new AuthorDto(user1));
+                new AuthorDto(user));
         Post post1 = new Post(null, sdf.parse("12/07/2000"),"Bom dia ","Acordei feliz hoje!! ", new AuthorDto(user2));
 
         postRepository.saveAll(List.of(post,post1));
 
-        user1.getPosts().addAll(Arrays.asList(post,post1));
+        user.getPosts().addAll(Arrays.asList(post,post1));
 
-        userRepository.save(user1);
+        userRepository.save(user);
 
     }
 

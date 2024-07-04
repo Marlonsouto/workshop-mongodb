@@ -1,6 +1,7 @@
 package com.workshopdb.workshopmongodb.resourse;
 
 import com.workshopdb.workshopmongodb.domain.Post;
+import com.workshopdb.workshopmongodb.domain.User;
 import com.workshopdb.workshopmongodb.dto.UserDto;
 import com.workshopdb.workshopmongodb.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +23,7 @@ public class UserResource {
     @GetMapping
     public ResponseEntity<List<UserDto>> findAll() {
         final var listUsers = userService.findAllUsers();
-        final List<UserDto> list = listUsers.stream().map(UserDto::new).collect(Collectors.toList());
+        final List<UserDto> list = listUsers.stream().map((user) -> new UserDto(user)).collect(Collectors.toList());
         return ResponseEntity.ok(list);
     }
 

@@ -20,7 +20,7 @@ public class Post implements Serializable {
     private Date date;
     private String title;
     private String body ;
-    private transient AuthorDto author ;
+    private AuthorDto author ;
 
     public Post() {}
 
