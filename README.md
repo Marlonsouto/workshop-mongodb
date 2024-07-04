@@ -20,15 +20,16 @@ Este projeto é um exemplo de aplicação Spring Boot integrada com MongoDB, dem
 
 ## Passos para Executar um Projeto
 
-1. Explorar o Projeto :
+1. #### Clone o repositório:
+```bash
+git clone https://github.com/Marlonsouto/workshop-mongodb.git
+```
+
+2. Explorar o Projeto :
 Navegue até o diretório do projeto:
 
 ```bash
 cd workshop-mongodb
-```
-2. #### Clone o repositório:
-```bash
-   git clone https://github.com/Marlonsouto/workshop-mongodb.git
 ```
 
 3. #### Para o projeto, foi usado Maven para gerenciar dependências:
@@ -42,7 +43,6 @@ Maven: .mvn install
 
 4. #### Compilar e Executar o Projeto
 Maven:
-
 ```bash
 mvn clean install
 ```
@@ -51,9 +51,7 @@ mvn clean install
   mvn spring-boot:run
 ```
 
-
-
-## Autores
+## Autor
 
 - [@Marlonsouto](https://github.com/Marlonsouto)
 
